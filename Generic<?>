@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by fredzhao on 7/05/17.
+ */
+public class GenericTest {
+    public static void main(String args[]){
+        List<String> name = new ArrayList<>();
+        name.add("100");
+        getData(name);
+       // getNumber(name);
+    }
+    public static void getData(List<?> data){
+        System.out.println(data.get(0));
+    }
+    public static void getNumber(List<? extends Number> data){
+        System.out.println(data.get(0));
+    }
+}
