@@ -1,0 +1,33 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+/**
+ * Created by fredzhao on 7/05/17.
+ */
+public class TreeSetDemo {
+    TreeSet ts = new TreeSet();
+    HashSet set = new HashSet<>();
+    protected TreeSetDemo(){
+        ts.add(1);
+        ts.add(2);
+        ts.add(3);
+        ts.add(4);
+        ts.add(2);
+        set.add(2);
+        set.add(0);
+
+        Iterator it=ts.iterator();
+        Iterator it1=set.iterator();
+
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+        while (it1.hasNext()){
+            System.out.println(it1.next());
+        }
+    }
+    public static void main(String args[]){
+        new TreeSetDemo();
+    }
+}
