@@ -1,0 +1,33 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.*;
+/**
+ * Created by fredzhao on 7/05/17.
+ */
+public class IteratorTest {
+    public static void main(String args[]){
+        HashMap<String,String> map = new HashMap<>();
+        map.put("1","value1");
+        map.put("2","value2");
+        map.put("3","value3");
+        map.put("4","value3");
+        map.put("-1","value0");
+        //first
+        System.out.println("map.keyset-->key&value:");
+        for (String key: map.keySet()){
+            System.out.println("key=" + key +" and values:" + map.get(key));
+        }
+        //second
+        System.out.println("map.entrySet&iterator:");
+        Iterator<HashMap.Entry<String,String>> it = map.entrySet().iterator();
+        while (it.hasNext()){
+            HashMap.Entry<String,String> temp = it.next();
+            System.out.println(temp.getKey()+"-->"+temp.getValue());
+        }
+        //third
+        System.out.println("map.value:");
+        for (String value: map.values()){
+            System.out.println(value);
+        }
+    }
+}
